@@ -1,0 +1,9 @@
+flask==1.0.3
+flask_wtf==0.14.3
+opencv-contrib-python-headless==4.5.2.54
+mediapipe==0.8.4
+pymongo==3.11.3
+email_validator==1.1.2
+werkzeug==0.16.0
+tensorflow
+tensorflow-gpu
