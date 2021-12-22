@@ -23,20 +23,20 @@ class FaceMeshDetector(object):
         
     def get_frame(self):
         success, img = cap.read()
-        # imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        # results = faceMesh.process(imgRGB)
-        # if results.multi_face_landmarks:
-        #     for faceLms in results.multi_face_landmarks:
-        #         mpDraw.draw_landmarks(img, faceLms, mpFaceMesh.FACE_CONNECTIONS, drawSpec,drawSpec)
-        #         face = []
-        #         for id,lm in enumerate(faceLms.landmark):
-        #                 #print(lm)
-        #                 ih, iw, ic = img.shape
-        #                 x,y = int(lm.x*iw), int(lm.y*ih)
-        #                 face.append([x,y])
+        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        results = faceMesh.process(imgRGB)
+        if results.multi_face_landmarks:
+            for faceLms in results.multi_face_landmarks:
+                mpDraw.draw_landmarks(img, faceLms, mpFaceMesh.FACE_CONNECTIONS, drawSpec,drawSpec)
+                face = []
+                for id,lm in enumerate(faceLms.landmark):
+                        #print(lm)
+                        ih, iw, ic = img.shape
+                        x,y = int(lm.x*iw), int(lm.y*ih)
+                        face.append([x,y])
                         
-        #     ret, jpeg = cv2.imencode('.jpg', img)
-        #     return  jpeg.tobytes()
+            ret, jpeg = cv2.imencode('.jpg', img)
+            return  jpeg.tobytes()
         
         
         ret, jpeg = cv2.imencode('.jpg', img)
