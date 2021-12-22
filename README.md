@@ -2,7 +2,7 @@
 The main goal of this project is to integrate machine learning with web app (Admin dashboard
 & Online Shop) that makes shopping eyeglasses faster and easier.
 This mission consists of face shape determination, then provide eyeglasses recommendations
-(based on customer FS).  
+(based on customer face shape).  
 
 ## Shop use case diagram
 ![image](https://user-images.githubusercontent.com/12258599/147075972-56d16783-23df-4973-9b9c-a8cb87a4a5dc.png)
